@@ -11,7 +11,7 @@
 <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
     <a href="#about" data-bs-toggle="collapse" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
       <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-      <span class="fs-5 fw-semibold">APCSA</span>
+      <span class="fs-5 fw-semibold">Software Development</span>
     </a>
     <ul class="list-unstyled ps-0">
         <li class="mb-1">
@@ -50,6 +50,16 @@
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a data-bs-toggle="collapse" href="#homework" class="link-dark d-inline-flex text-decoration-none rounded">Homework</a></li>
             <li><a data-bs-toggle="collapse" href="#labs" class="link-dark d-inline-flex text-decoration-none rounded">Labs</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#rules-collapse" aria-expanded="false">
+          Classroom-Lab Rules
+        </button>
+        <div class="collapse" id="rules-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a data-bs-toggle="collapse" href="#rules" class="link-dark d-inline-flex text-decoration-none rounded">Rules</a></li>
           </ul>
         </div>
       </li>
@@ -112,7 +122,7 @@
                     You should see your private key (id_rsa) and public key (id_rsa.pub) inside that directory.
                 </li>
                 <li>
-                    Log in to your GitHub accout.
+                    Log in to your GitHub account.
                     Click on your profile picture (right-top). You will see a menu click on Settings.
                     You will see a menu on the left click on SSH and GPG keys and click on Add New SSH key.
                     You will give a title to that key. Key type shoud be "Authentication Key" and copy your public key (the content inside the file id_rsa.pub) in the field "Key".
