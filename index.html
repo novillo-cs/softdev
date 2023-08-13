@@ -23,6 +23,8 @@
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a data-bs-toggle="collapse" href="#notes" class="link-dark d-inline-flex text-decoration-none rounded">
                 Notes</a></li>
+            <li><a data-bs-toggle="collapse" href="#notes_new" class="link-dark d-inline-flex text-decoration-none rounded">
+                Notes new</a></li>
             <li><a data-bs-toggle="collapse" href="#repo" class="link-dark d-inline-flex text-decoration-none rounded">
                 APCSA Material Repo</a></li>
           </ul>
@@ -854,12 +856,20 @@ public class ReadFile {
 
     
     </div>
-     
+    <div class="collapse show" id="notes_new" data-bs-parent="#rightSide">
+        Bob, hello
+    </div>
     </div>
     </div>
    </main>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script >
+        $(function(){
+            $("#notes_html").load("content/notes.html")
+        });
+    </script>
 </body>
 </html>
 
