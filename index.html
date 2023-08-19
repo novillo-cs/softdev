@@ -34,7 +34,7 @@
         </button>
         <div class="collapse" id="dashboard-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a data-bs-toggle="collapse" href="#git_ssh"
+            <li><a data-bs-toggle="collapse" href="#git"
                    class="link-dark d-inline-flex text-decoration-none rounded">Git and SSH</a>
             </li>
           </ul>
@@ -79,223 +79,12 @@
     </ul>
   </div>
     
-  <div class="flex-grow-1 p-2 overflow-scroll" id="rightSide">
-    <div class="d-flex">
-        <div class="collapse" id="git_ssh" data-bs-parent="#rightSide">
-            <h1>Git</h1>
-            <p>It is an open-source version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development.</p>
-            <h1>GitHub</h1>
-            <p>It is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere. This tutorial teaches you GitHub essentials like repositories, branches, commits, and pull requests.
-</p>
-            <h1>Installing Git</h1>
-            <p>Mac and linux: Git should be installed already.</p>
-            <p>Windows: Install git and the shell gitbash from here: https://gitforwindows.org/ 
-            This includes git, gitbash, and has shell integration so that you can right-click on a folder in Windows Explorer to access gitbash at that location.</p>
-            
-            
-            <h1>Git commands</h1>
-            <b>The git config command</b>  
-            <pre>
-            git config --global user.name "YOUR_NAME_HERE"
-            git config --global user.email YOUR_EMAIL_HERE
-            </pre>
-            
-            <p>The basic commands we are going to use in this class are:</p>
-            
-            <ul>
-            <li>git clone -> retrieve an entire repository from a hosted location via URL</li>
-            <li>git pull -> fetch and merge any commits from the tracking remote branch</li>
-            <li>git add -> add a file as it looks now to your next commit (stage)</li>
-            <li>git commit -> commit your staged content as a new commit snapshot</li>
-            <li>git push -> Transmit local branch commits to the remote repository branch</li>
-            </ul>
-            <p><b>Git reference sheet:</b> https://education.github.com/git-cheat-sheet-education.pdf</p>
-            <h1>Connect to GitHub with SSH</h1>
-            <p>Follow these steps to create a ssh, connect to GitHub with SSH and clone your repository.</p>
-            <ol>
-                <li>
-                    Create your ssh key: Open your terminal and type
-                    <pre>ssh-keygen -t rsa</pre>
-                    Check if your key was generated:
-                    <pre>
-                    <p>cd .ssh/
-                    ls
-                    </pre></p>
-                    
-                    You should see your private key (id_rsa) and public key (id_rsa.pub) inside that directory.
-                </li>
-                <li>
-                    Log in to your GitHub account.
-                    Click on your profile picture (right-top). You will see a menu click on Settings.
-                    You will see a menu on the left click on SSH and GPG keys and click on Add New SSH key.
-                    You will give a title to that key. Key type shoud be "Authentication Key" and copy your public key (the content inside the file id_rsa.pub) in the field "Key".
-                    
-                </li>
-                <li>
-                    Go to the following link and test your SSH connection
-                    https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection
-                </li>
-           
-                <li>
-                   Let's clone your repository in your local computer:
-                   Go to your assignments repository that we created for this class in GitHub. You will see a green button "Code", click there and select SSH to have the appropiate link that will allow you to clone your repository and copy the link you see there.
-                    
-                </li>
-                <li>
-                    On your terminal go inside the folder you want to clone your repository and type:
-                    <pre> git clone PASTE_THE_LINK_YOU_COPIED_FROM_GITHUB_(git@...) </pre>
-                             
-                 </li>
-                 <li>
-                     Go inside the folder that appears after you excecute the clone command and you will see the files you have on your GitHub repository.
-                 </li>
-            </ol>
-        </div>
-   
-        <div class="collapse" id="labs" data-bs-parent="#rightSide">   
-           <h1>06 LAB: Deque</h1>
-           <p>Accept <a href="https://classroom.github.com/a/dZL25vGh">this</a> assignment.</p>
-           <p>Directions available in the lab repo.</p>
-           <p><b>DUE DATE:</b> 04-02-2023 (11:59 pm)</p>
-            
-           <h1>05 LAB: QuickSelect, QuickSort and MergeSort</h1>
-           <p>Accept <a href="https://classroom.github.com/a/rmhBacjJ">this</a> assignment.</p>
-           <p>Directions available in the lab repo.</p>
-           <p><b>DUE DATE:</b> 03-26-2023 (11:59 pm)</p>
-            
-           <h1>04 LAB: Sorting Algorithms</h1>
-           <p>Accept <a href="https://classroom.github.com/a/D6KB8-OY">this</a> assignment.</p>
-           <p><a href=" https://github.com/novillo-cs/apcsa_material/blob/main/labs/04_lab_sorts.pdf">Directions</a></p>
-           <p><b>DUE DATE:</b> 03-08-2023 (11:59 pm)</p>
-            
-            
-            <h1>03 LAB: ArrayList Hierarchy</h1>
-            <p>Accept <a href="https://classroom.github.com/a/6ahlL_-f">this</a> assignment. Directions should be in that repository.</p>
-            <p><b>DUE DATE:</b> 03-03-2023 (11:59 pm)</p>   
-            
-            <h1>02 LAB: Bank Accounts (Inheritance, Abstraction and Interface)</h1>
-            <p>Accept <a href="https://classroom.github.com/a/11xf6ONc">this</a> assignment. Directions should be in that repository.</p>
-            <p><b>DUE DATE:</b> 03-03-2023 (11:59 pm)</p>   
-            
-            <h1>01 LAB: USACO</h1>
-            
-            <p>Accept <a href="https://classroom.github.com/a/lGriYgby">this</a> assignment. Your java files should be in that repository.</p>
-            <p>Write two Java scripts Bronze.java and Silver.java with the solutions to the USACO problems.</p>
-            <p><b>DUE DATE:</b> 02-13-2023 (8:00 am)</p>   
-        </div>
-    
-        <div class="collapse" id="homework" data-bs-parent="#rightSide">
-            
-            <h1>04/26/2023</h1>
-            <p>Finish the grid animation (alternating between 2 colors).</p>
-            
-            <h1>04/25/2023</h1>
-            <p>Complete the animations script.</p>
 
-            <h1>04/24/2023</h1>
-            <p>Install Processing on your home computer https://processing.org/ </p>
-            <p>Complete the avatar script.</p>
-
-            <h1>04/18/2023</h1>
-            <p>Write some methods to solve <a href="https://github.com/novillo-cs/apcsa_material/blob/main/lessons/recursion/practice.md">these</a> recursive exercises.</p>
-    
-            <h1>04/04/2023</h1>
-            <p>Finish the implementation of your Postfix Expression Calculator (only the calculator, the coversion method is not homework)</p>
-            
-            <h1>03/27/2023</h1>
-            <p>Implement Stack.java and Queue.java. You started working on this in class, so you may leave the files there (classwork folder) and keep working on those. No need to create a homework folder for this assignment.</p>
-            
-            <h1>03/23/2023</h1>
-            <p>Complete the following<a href="https://github.com/novillo-cs/apcsa_material/blob/main/lessons/sorting_algorithms/summary_sorting.docx">worksheet</a>
-            <p>Upload your worksheet to your assignments repo …/homeworks/2023-03-23/</p>
-            
-            <h1>02/15/2023</h1>
-            <p>You may find the homework directions <a href="https://github.com/novillo-cs/apcsa_material/blob/main/lessons/abstraction_interface/02152023_homework.pdf"> here </a>
-            <p>Your files should be located here …/homeworks/2023-02-15/</p>
-
-            <h1>02/14/2023</h1>
-            <ul>
-            <li>Create the following classes: Shape (superclass), Rectangle, Triangle.</li>
-            <li>Rectangle and Triangle should inherit from Shape.</li>
-
-
-            <li>Declare private instance variables in class Shape: double height and double width.</li>
-            <li>Write a constructor in class Shape to initialize the values for height and width.</li>
-            <li>Write public methods in class Shape to get height and width values: getHeight() and getWidth()</li>
-
-            <li>Write a method getArea() in both of the subclasses Rectangle and Triangle which calculates the area and prints the result.</li>
-            <li>You will need to define the constructors in Rectangle and Triangle classes (which call the Shape constructor).</li>
-            </ul>
-            
-            <h1>02/13/2023</h1>
-            <p>Click <a href="https://github.com/novillo-cs/apcsa_material/blob/main/lessons/ArrayList/homeworks/homework_arraylist.pdf">here</a> to read the problem.</p>
-            
-            <p><b>Directions:</b> You do not need to compile and run any code (you are going to get errors because the classes are not complete). Just write your method on a file named CookieOrder.txt. The file should be located here …/homeworks/2023-02-13/CookieOrder.txt</p>
-
-            <p>Part (a) is your homework.</p>
-            <p>Part (b) is optional. If you have a few minutes left over from your 30-min homework try to work on this one.
-
-            <h1>02/07/2023</h1>
-            
-            <p>Think about a strategy for the USACO Silver version "Cow Travelling" and write an outline for your solution.</p>
-            <p>The file should be here ../homeworks/2023-02-07/YOUR_FILE_NAME_HERE </p>
-            
-            <h1>02/06/2023</h1>
-            <ul>
-            <li><p>Write an outline for your solution to the USACO Bronze version: Cow Stomping / Lake Making</p>
-                <p>The file should be here ../homeworks/2023-02-06/YOUR_FILE_NAME_HERE </p>
-            </li>
-            
-            <li>Complete this <a href="https://docs.google.com/forms/d/e/1FAIpQLScNEjgxr_utRHLyUjvxIBuojna-K9OpRRbaf9wnBR1SOD52Pw/viewform?usp=sf_link">form</a></li>
-            
-            </ul>
-            <h1>02/03/2023</h1>
-            <p>You may work solo or with a partner (write the collaborator names on the first line of the java file).</p>
-            <ul>
-                <li>
-                    <p>Download <a href="https://github.com/novillo-cs/apcsa_material/blob/main/homeworks/2023-02-03/input.txt ">this</a> txt file and put it inside today's homework folder (../homeworks/2022-02-03/). Do not forget to git add this file.</p>
-
-                    <p>Write a Java script (ReadFile.java) that reads the input.txt file, creates a 2D array with that data and prints the 2D array.</p>
-                </li>
-                
-                <li>
-                    <p><p>Download <a href="https://github.com/novillo-cs/apcsa_material/blob/main/homeworks/2023-02-03/my_text.txt">this</a> txt file and put it inside today's homework folder (../homeworks/2022-02-03/). Do not forget to git add this file.</p></p>
-                    <p>Write a Java program (LongestWord.java) to find the longest word inside my_text.txt and print that word</p>
-                </li>
-            </ul>
-            <p><b>DO NOT FORGET TO ADD ANY NEW FILE TO YOUR REPOSITORY, COMMIT AND PUSH YOUR CHANGES</b></p>
-            
-            <a href="https://github.com/novillo-cs/apcsa_material/tree/main/homeworks/2023-02-03">Solutions</a>
-            <h1>02/02/2023</h1>
-            <ul>
-                <li>
-                    <p>Practice executing the git commands we learned in class today (git pull, git commit, git push, git add). Create git merge conflicts and solve them.</p>
-                    <p><b>REMEMBER:</b> We will use these commands to submit homeworks and labs. </p>
-                </li>
-            </ul>
-            <h1>02/01/2023</h1>
-            <ul>
-                <li>
-                    Install JAVA: Download the latest version for your operating system https://adoptium.net/ 
-                </li>
-                <li>
-                    Connect to GitHub using your SSH keys with your home machines. See <a data-bs-toggle="collapse" href="#git_ssh"
-                   class="link-dark d-inline-flex text-decoration-none rounded">here</a>
-                </li>
-            </ul>
-        </div>
-
-
-  
-        
-        
-        <div class="collapse" id="contact" data-bs-parent="#rightSide">
-            <p><b>Email:</b> jnovillo@stuy.edu </p>
-        </div>
-
-       
     <div class="collapse show" id="notes" data-bs-parent="#rightSide">
         <div id="notes_html"></div>
+    </div>
+    <div class="collapse" id="git" data-bs-parent="#rightSide">
+        <div id="git_html"></div>
     </div>
     <div class="collapse" id="homework" data-bs-parent="#rightSide">
         <div id="homework_html"></div>
@@ -324,10 +113,12 @@
     <script >
         $(function(){
             $("#notes_html").load("contents/notes.html")
+            $("#git_html").load("contents/git.html")
             $("#homework_html").load("contents/homework.html")
             $("#projects_html").load("contents/projects.html")
             $("#rules_html").load("contents/rules.html")
             $("#grading_html").load("contents/grading.html")
+            $("#contact_html").load("contents/contact.html")
         });
     </script>
 </body>
