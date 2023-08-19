@@ -82,9 +82,27 @@
         <div class="collapse show" id="notes" data-bs-parent="#rightSide">
             <div id="notes_html"></div>
         </div>
+        <div class="collapse" id="git" data-bs-parent="#rightSide">
+            <div id="git_html"></div>
+        </div>
+        <div class="collapse" id="homework" data-bs-parent="#rightSide">
+            <div id="homework_html"></div>
+        </div> 
+        <div class="collapse" id="projects" data-bs-parent="#rightSide">
+            <div id="projects_html"></div>
+        </div>
         <div class="collapse" id="rules" data-bs-parent="#rightSide">
             <div id="rules_html"></div>
-        </div
+        </div>
+        <div class="collapse" id="grading" data-bs-parent="#rightSide">
+            <div id="grading_html"></div>
+        </div>
+        <div class="collapse" id="repo" data-bs-parent="#rightSide">
+            <div id="repo_html"></div>
+        </div>
+        <div class="collapse" id="contact" data-bs-parent="#rightSide">
+            <div id="contact_html"></div>
+        </div>
     </div>
  </div>
  
@@ -95,7 +113,12 @@
     <script >
         $(function(){
             $("#notes_html").load("contents/notes.html")
+            $("#git_html").load("contents/git.html")
+            $("#homework_html").load("contents/homework.html")
+            $("#projects_html").load("contents/projects.html")
             $("#rules_html").load("contents/rules.html")
+            $("#grading_html").load("contents/grading.html")
+            $("#contact_html").load("contents/contact.html")
         });
     </script>
 </body>
