@@ -23,6 +23,8 @@
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a data-bs-toggle="collapse" href="#notes" class="link-dark d-inline-flex text-decoration-none rounded">
                 Notes</a></li>
+            <li><a data-bs-toggle="collapse" href="#outline" class="link-dark d-inline-flex text-decoration-none rounded">
+                Course Outline</a></li>
             <li><a data-bs-toggle="collapse" href="#repo" class="link-dark d-inline-flex text-decoration-none rounded">
                 SoftDev Material Repo</a></li>
           </ul>
@@ -103,6 +105,9 @@
         <div class="collapse" id="contact" data-bs-parent="#rightSide">
             <div id="contact_html"></div>
         </div>
+        <div class="collapse" id="outline" data-bs-parent="#rightSide">
+            <div id="outline_html"></div>
+        </div>
     </div>
  </div>
  
@@ -113,6 +118,7 @@
     <script >
         $(function(){
             $("#notes_html").load("contents/notes.html")
+            $("#outline_html").load("contents/outline.html")
             $("#repo_html").load("contents/repo.html")
             $("#git_html").load("contents/git.html")
             $("#homework_html").load("contents/homework.html")
