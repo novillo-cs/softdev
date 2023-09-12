@@ -22,6 +22,26 @@
   <li>Now, you can excecute KeePassXC. Double click on the icon.</li>
   <li>You can create a new database for your passwords, adjust the database encryptation, add your passwords, and save database (file) with your passwords.</li>
 </ul>
+<p>I would suggest that you store the KeePassXC database in Google Drive, and have your Google  Drive mounted on your computer as a drive.</p>
+
+<h3>Mount Google Drive</h3>
+<p><b>Linux:</b></p>
+<p>On Linux mint (or a debian derivative), you can go to your System Settings -> Online Accounts -> Google, and enter your credentials. Now, you should have Google Drive mounted as a drive in your computer. When selecting the Google product to mount, you must choose only 'files', unselect the other options.</p>
+</p>
+<p><b>Windows and MacOS: Download Google Driver Client <a href="https://www.google.com/drive/download/">here</a></b></p>
+
+<p>You will see Google Drive mounted in your computer as another drive.</p>
+
+<p>Path Google Drive mounted: /run/user/<user_session_id>/gvfs/<google_account>/</p>
+
+<p>Check your session id: loginctl list-sessions</p>
+
+
+<p>Possible issue when adding Google credentials: Password do not match the original (keyring)</p>
+<p><b>Solution:</b></p>
+<p>Go to Passwords and Keys in your computer. Right click on Login -> Delete</p>
+
+  
 <h2>Pre-work</h2>
 
 <p>SoftDev pre-work aims to learn/review the basics of Python, the backend programming language that will be used in this course. While some students have already worked with Python, it is a new language for others. The programming skills learned using Java last year will help to pick Python quickly because Python is a dynamic language, and the syntax is easier than Java.</p>
