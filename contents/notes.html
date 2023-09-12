@@ -35,13 +35,45 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
       export PATH="$HOME/.pyenv/bin:$PATH"
       eval "$(pyenv init --path)"
       eval "$(pyenv virtualenv-init -)"
-
     </pre>
-    <p>That will load the pyenv executable into your shell environment.
-</p>
+    <p>Those lines will load the pyenv executable into your shell environment.</p>
   </li>
   
 </ul>
+<p>List the available Python versions:</p>
+<pre>pyenv install –list</pre>
+
+<p>When new Python versions are available you can refresh the list of the versions with this command: </p>
+<pre>pyenv update</pre>
+<p>Usually, the lastest stable version should be installed (3.11.5 when I wrote this tutorial)</p>
+<pre>pyenv install 3.11.5</pre>
+
+<p>Check Python installed versions with pyenv:</p>
+<pre>pyenv versions</pre>
+
+<p>Type <pre>pyenv versions </pre> and you will notice that Python 3.11.5 is activated, and this version is in used because there is a file .python-version with the version described inside the file.</p>
+
+<p>Let’s create a folder for our first project. Go inside the folder and type:</p>
+<pre>pyenv local 3.11.5</pre>
+<p>That creates a file .python-version in the current folder.</p>
+
+<h2>Python Virtual Environment </h2>
+<a href="https://docs.python.org/3/library/venv.htm">Documentation</a>
+<p>Let's run the command:</p>
+<pre>python -m venv env_3.11.5</pre>
+
+<p>This folder contains some python executable and some libraries and will be able to host independently the python package we are going to install without interfering with the python installed at the system level.</p>
+
+<p>Delete the file .python-version, just to remove any ambiguities. And let's load the python virtual env:</p>
+<pre>source env_3.11.5/bin/activate</pre>
+
+<p>Check the Python version:</p>
+<pre>which python</pre>
+<p>You will see that the python executable used is coming from the virtual env folder.</p>
+
+<p>If you want to deactivate the python virtual env, just run:</p>
+<pre>deactivate</pre>
+
 
 <h2>Password Management</h2>
 
@@ -75,7 +107,7 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 
 <p>You will see Google Drive mounted on your computer as another drive.</p>
 
-<p>Path Google Drive mounted: /run/user/<user_session_id>/gvfs/<google_account>/</p>
+<p>Path Google Drive mounted: /run/user/your_user_session_id/gvfs/your_google_drive/</p>
 
 <p>Check your session id: loginctl list-sessions</p>
 
