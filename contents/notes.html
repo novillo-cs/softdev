@@ -1,4 +1,4 @@
-<h1>SOFTWARE DEVELOPMENT NOTES</h1>
+<h1>Setting up Tools</h1>
 
 <h2>Python Virtual Environment</h2>
 <p><b>What is a virtual environment?</b></p>
@@ -52,7 +52,7 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 <pre>pyenv versions</pre>
 
 
-<p>Let’s create a folder for our first project. Go inside the folder and type:</p>
+<p>Let’s create a folder <b>movie_theater</b> for our first project. Go inside the folder and type:</p>
 <pre>pyenv local 3.11.5</pre>
 <p>That creates a file .python-version in the current folder.</p>
 
@@ -76,8 +76,48 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 <p>If you want to deactivate the python virtual env, just run:</p>
 <pre>deactivate</pre>
 
+<h2>Django Installation</h2>
 
-<h2>Password Management</h2>
+<p>Go to our project folder movie_theater, make sure the virtual en is installed, and activate it.</p>
+
+<p>Let’s create a folder: <b>requirements_env</b>. Inside this folder, we are going to create two files: <b>main.in</b> and <b>dev.in</b></p>
+
+<p>These two files will list the package that we are going to need for our project. We can separate the package we need between production and development. We are not going to put our project into a server for production use (under a nginx server, a web server like gunicorn or uvicorn, systemd for a system services manager, logging backup…), but we can separate the package so you know how to do it.</p>
+
+<p>You have more documentation <a href="https://github.com/jazzband/pip-tools#workflow-for-layered-requirements">here</a>: 
+
+<p>In the file main.in, we can add the django package:</p>
+<p>django==4.2</p>
+
+<p>In the file dev.in, let's add:</p>
+<p>-c main.txt</p>  
+
+<p>nodeenv</p>
+
+<p>For django, target a version because for each version, the django team adds new features, and some settings could change, but they do the best to keep everything working when you move to a higher version. For other package, you do not need to target a specific version, but when you are ready to move on production, it is better to freeze the versions of all the packages you have selected (no need to specify the versions of the dependencies).</p>
+<p>nodeenv will be used later in the course when we will need to compile some javascript libraries.</p>
+
+<p>Let's build the packages:</p>
+<pre>
+  pip install --upgrade pip-tools pip setuptools wheel
+  pip-compile --upgrade --generate-hashes --output-file requirements_env/main.txt requirements_env/main.in
+  pip-compile --upgrade --generate-hashes --output-file requirements_env/dev.txt requirements_env/dev.in  
+</pre>
+
+<p>Installing the packages:</p>
+<pre>
+# production
+pip-sync requirements_env/main.txt
+
+#dev
+pip-sync requirements_env/main.txt requirements_env/dev.txt
+</pre>
+
+<p>You can check the packages that have been installed running the following command:</p>
+<pre>pip list</pre>
+
+
+<h1>Password Management</h1>
 
 <p>It is important to securely store, generate and manage passwords.</p>
 <p>There are many online password management applications that provide convenience. However, there could be some disadvantages:</p>
@@ -101,7 +141,7 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 </ul>
 <p>I suggest that you store the KeePassXC database in Google Drive and have your Google Drive mounted on your computer as a driver.</p>
 
-<h3>Mount Google Drive</h3>
+<h1>Mount Google Drive</h1>
 <p><b>Linux:</b></p>
 <p>On Linux Mint (or a Debian derivative), you can go to your System Settings -> Online Accounts -> Google, and enter your credentials. Now, you should have Google Drive mounted as a drive in your computer. When selecting the Google product to mount, you must choose only 'files', unselect the other options.</p>
 </p>
@@ -119,7 +159,7 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 <p>Go to Passwords and Keys in your computer. Right click on Login -> Delete</p>
 
   
-<h2>Pre-work</h2>
+<h1>Pre-work</h1>
 
 <p>SoftDev pre-work aims to learn/review the basics of Python, the backend programming language that will be used in this course. While some students have already worked with Python, it is a new language for others. The programming skills learned using Java last year will help to pick Python quickly because Python is a dynamic language, and the syntax is easier than Java.</p>
 
