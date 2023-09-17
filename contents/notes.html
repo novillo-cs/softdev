@@ -14,6 +14,40 @@
 <p>Create an application:</p>
 <pre>python manage.py startapp movies</pre>
 
+<h2>Your fist view</h2>
+<p>Add the following lines in movies/views.py</p>
+<pre>
+from django.http import HttpResponse
+
+def index(request):
+   return HttpResponse("Hello, world. You're at the movies index.")
+</pre>
+
+<p>Let’s create the movies/urls.py and add these lines:</p>
+<pre>
+from django.urls import path
+
+from . import views
+
+app_name = "movies"
+
+urlpatterns = [
+   path("", views.index, name="index"),
+]
+</pre>
+
+<p>Let’s edit these lines in movie_theater/urls.py:</p>
+
+<pre>
+from django.urls import path, include
+
+urlpatterns = [
+   path('admin/', admin.site.urls),
+   path('movies/', include('movies.urls', namespace='movies')),
+] 
+</pre>
+
+
 <h1>Setting up Tools</h1>
 
 <h2>Python Virtual Environment</h2>
