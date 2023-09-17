@@ -47,6 +47,15 @@ urlpatterns = [
 ] 
 </pre>
 
+<h2>Configure VSCodium with Django extension</h2>
+<a href="https://code.visualstudio.com/docs/python/tutorial-django">https://code.visualstudio.com/docs/python/tutorial-django</a>
+
+<p>Close the runserver if it is open in the console.</p>
+<p>Follow the website instructions to create the launch.json. You should add the following for the default program’s path:</p>
+<pre>"${workspaceFolder}\\manage.py"</pre>
+<p>Then edit it on the file launch.json. For example, with my configuration, it is:</p>
+<pre>"${workspaceFolder}/movie_theater/manage.py"</pre>
+
 
 <h1>Setting up Tools</h1>
 
