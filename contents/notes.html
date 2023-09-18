@@ -1,5 +1,6 @@
 <!-- <p>Developing a project</p> -->
 
+
 <h1>Building your first Django Project</h1>
 <p><b>Make sure you have the correct python virtual env activated.</b></p>
 
@@ -14,7 +15,17 @@
 <p>Create an application:</p>
 <pre>python manage.py startapp movies</pre>
 
-<h2>Your fist view</h2>
+<h2>Django Project MVT Structure</h2>
+
+<p>Django is based on MVT (Model-View-Template) architecture. MVT has the following parts:</p>
+
+<p><b>Model:</b> The model is going to act as the interface of your data. It is responsible for maintaining data. It is the logical data structure behind the entire application and is represented by a database (generally relational databases such as MySql, Postgres).</p>
+
+<p><b>View:</b> The View is the user interface — what you see in your browser when you render a website. It is represented by HTML/CSS/Javascript and Jinja files.</p>
+
+<p><b>Template:</b> A template consists of static parts of the desired HTML output and some special syntax describing how dynamic content will be inserted.</p>
+
+<h2>Your first view</h2>
 <p>Add the following lines in movies/views.py</p>
 <pre>
 from django.http import HttpResponse
