@@ -140,7 +140,13 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 <p>This folder contains some python executable and some libraries and will be able to host independently the python package we are going to install without interfering with the python installed at the system level.</p>
 
 <p>Delete the file .python-version, just to remove any ambiguities. And let's load the python virtual env:</p>
+
+<p><b>Linux - Mac:</b></p>
 <pre>source env_3.11.5/bin/activate</pre>
+
+<p><b>Windows:</b></p>
+<pre>env_3.11.5\Scripts\activate</pre>
+<p>In case that command does not work, follow the directions <a href="https://www.stanleyulili.com/powershell/solution-to-running-scripts-is-disabled-on-this-system-error-on-powershell">here</a></p>
 
 <p>Check the Python version:</p>
 <pre>which python</pre>
