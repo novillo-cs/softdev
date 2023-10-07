@@ -23,6 +23,8 @@
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a data-bs-toggle="collapse" href="#notes" class="link-dark d-inline-flex text-decoration-none rounded">
                 Notes</a></li>
+            <li><a data-bs-toggle="collapse" href="#resources" class="link-dark d-inline-flex text-decoration-none rounded">
+                Resources</a></li>              
             <li><a data-bs-toggle="collapse" href="#outline" class="link-dark d-inline-flex text-decoration-none rounded">
                 Course Outline</a></li>
             <li><a data-bs-toggle="collapse" href="#repo" class="link-dark d-inline-flex text-decoration-none rounded">
@@ -87,6 +89,9 @@
         <div class="collapse show" id="notes" data-bs-parent="#rightSide">
             <div id="notes_html"></div>
         </div>
+        <div class="collapse show" id="resources" data-bs-parent="#rightSide">
+            <div id="resources_html"></div>
+        </div>
         <div class="collapse" id="piazza" data-bs-parent="#rightSide">
             <div id="piazza_html"></div>
         </div>
@@ -124,6 +129,7 @@
     <script >
         $(function(){
             $("#notes_html").load("contents/notes.html")
+            $("#resources_html").load("contents/resources.html")
             $("#outline_html").load("contents/outline.html")
             $("#repo_html").load("contents/repo.html")
             $("#piazza_html").load("contents/piazza.html")
