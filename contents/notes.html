@@ -1,6 +1,36 @@
 <!-- <p>Developing a project</p> -->
 
 
+<h1>PostgreSQL and pgAdmin</h1>
+
+<p>PostgreSQL, known as Postgres, is a free and open-source relational database management system.</p>
+
+
+<p>pgAdmin is an open source administration and development platform for PostgreSQL.</p>
+
+
+<p>Install pgAdmin</p>
+
+<p>Create a python environment to install pgAdmin (Mint does not allow us to install directly)</p>
+<pre>
+pyenv local 3.11.5
+python -m venv env_3.11.5
+source env_3.11.5/bin/activate
+pip install pgadmin4
+</pre>
+
+<p>Create the following file env_3.10/lib/python3.10/site-packages/pgadmin4/config_local.py</p>
+<p>Copy this inside that file: </p>
+<pre>
+import os DATA_DIR = os.path.realpath(os.path.expanduser(u'~/.pgadmin/')) LOG_FILE = os.path.join(DATA_DIR, 'pgadmin4.log') SQLITE_PATH = os.path.join(DATA_DIR, 'pgadmin4.db') SESSION_DB_PATH = os.path.join(DATA_DIR, 'sessions') STORAGE_DIR = os.path.join(DATA_DIR, 'storage') SERVER_MODE = False
+</pre>
+
+<p>Run pdAdmin from your terminal:</p>
+<pre>pgadmin4</pre>
+<p>Go to http://127.0.0.1:5050 in your browser.</p>
+
+
+PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. 
 <h1>Databases</h1>
 <p><a href="https://github.com/novillo-cs/softdev_material/blob/main/lessons/databases.pdf">Slides</a></p>
 
