@@ -3,20 +3,28 @@
 
 <h1>PostgreSQL and pgAdmin</h1>
 
-<p>PostgreSQL, known as Postgres, is a free and open-source relational database management system.</p>
+<p><b>PostgreSQL</b>, known as Postgres, is a free and open-source relational database management system.</p>
 
+<p><b>pgAdmin</b> is an open source administration and development platform for PostgreSQL.</p>
 
-<p>pgAdmin is an open source administration and development platform for PostgreSQL.</p>
+<h2>Install PostgreSQL</h2>
 
+<p><b>Lab: </b>We havet PostgreSQL installed in our database (db) server. You do not need to install it in your lab machines.</p>
 
-<p>Install pgAdmin</p>
+<p><b>Home/Personal Devices: </b>Install <a href="https://www.postgresql.org/download/">PostgreSQL.</a></p>
+<ul>
+   <li>Linux users: Install Postgresql using the repository.</li>
+   <li>Windows and MacOS users: Install Postgresql using the binary file.</li>
+</ul>
 
-<p>Create a python environment to install pgAdmin (Mint does not allow us to install directly)</p>
+<h2>Install pgAdmin</h2>
+
+<p><b>Lab: </b>Create a python environment to install pgAdmin (Mint does not allow us to install directly)</p>
 <pre>
-pyenv local 3.11.5
-python -m venv env_3.11.5
-source env_3.11.5/bin/activate
-pip install pgadmin4
+   pyenv local 3.11.5
+   python -m venv env_3.11.5
+   source env_3.11.5/bin/activate
+   pip install pgadmin4
 </pre>
 
 <p>Create the following file env_3.10/lib/python3.10/site-packages/pgadmin4/config_local.py</p>
@@ -33,7 +41,15 @@ SERVER_MODE = False
 
 <p>Run pdAdmin from your terminal:</p>
 <pre>pgadmin4</pre>
-<p>Go to http://127.0.0.1:5050 in your browser.</p>
+<p>Go to http://127.0.0.1:5050 in your browser. This is your pgAdmin that will help you to manage your database.</p>
+
+<p><b>Home/Personal Devices:</b ></p>
+<ul>
+   <li>Windows and Mac users: Use the binary file to install. Download it from <a href="https://www.pgadmin.org/download/">repository</a></li>
+   <li>Debian or Ubuntu users: Use the <a href="https://www.pgadmin.org/download/pgadmin-4-apt/">repository</a> to install.</li>
+   <li>Fedora or RedHat users: Get one distribution from <a href="https://www.pgadmin.org/download/pgadmin-4-rpm/">here</a>.</li>   
+   <li>Other OS: Follow the directions to intall it with Python (as we did it on the lab machines).</li>
+</ul>
 
 <p>Once you're in the pgAdmin platform:</p>
 
@@ -41,8 +57,10 @@ SERVER_MODE = False
    <li>Right-click on Servers => Register => Server </li>
    <li>General: Give a name to your server </li>
    <li>Conection: Complete host, port, username, password.</li>
-   <li>Tunnels are needed in case of using personal laptops and at home if you want to access our database server. However, you can install Postgres at home and you may creater your own database server.</li>
+   <li>SSH tunnels are needed in case of using personal laptops and at home if you want to access our database server.</li>
+   <li>SSH Tunnel example: ssh -L 5432:localhost:5432 -C host</li>
 </ul>
+
 <h1>Databases</h1>
 <p><a href="https://github.com/novillo-cs/softdev_material/blob/main/lessons/databases.pdf">Slides</a></p>
 
